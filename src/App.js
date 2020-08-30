@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
-import CharacterCard from './characterCard';
+import CharacterCard from './CharacterCard';
 
 function App() {
   return (
     <div>
+      <CharacterCard/>
+      <CharacterCard/>
       <CharacterCard/>
     </div>
   );

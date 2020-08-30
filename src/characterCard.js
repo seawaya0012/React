@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function characterCard(params) {
+export default function CharacterCard() {
     return(
-        <div>character</div>
+        <div>CharacterCard</div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CharacterCard from "./CharacterCard";
-import _, { attempt } from 'lodash';
+import _ from 'lodash';
 
 const prepareStateFromWord = (given_word) => {
     let word = given_word.toUpperCase()
@@ -10,7 +10,8 @@ const prepareStateFromWord = (given_word) => {
         chars,
         attempt: 1,
         guess: '',
-        completed: false
+        completed: false,
+        loses: 1,
     }
 }
 

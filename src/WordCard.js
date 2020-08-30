@@ -25,8 +25,8 @@ export default function Wordcard(props) {
         setState({...state, guess})
         if(guess.length == state.word.length){
             if(guess == state.word){
-                console.log('yeah!')
-                setState({...state, guess: '', completed: true, attempt: 1})
+                console.log('You win!')
+                setState({...state, guess: '', completed: true, attempt: 1, chars: _.shuffle(Array.from(state.word)) })
             }else{
                 console.log('You lose '+ state.attempt +', reset')
                 setState({...state, guess: '', attempt: state.attempt + 1})

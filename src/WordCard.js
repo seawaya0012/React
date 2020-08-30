@@ -5,7 +5,7 @@ export default function Wordcard(props) {
     return(
         <div>
             {
-                Array.from(props.value).map((c, i) =>  <CharacterCard value={c} key={i}/>)
+                Array.from(props.value).map((a, i) =>  <CharacterCard value={a} key={i}/>)
             }
         </div>
     )

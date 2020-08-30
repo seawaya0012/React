@@ -11,7 +11,7 @@ const prepareStateFromWord = (given_word) => {
         attempt: 1,
         guess: '',
         completed: false,
-        loses: 1,
+        win: 1
     }
 }
 
@@ -26,8 +26,8 @@ export default function Wordcard(props) {
         setState({...state, guess})
         if(guess.length == state.word.length){
             if(guess == state.word){
-                console.log('You win!')
-                setState({...state, guess: '', completed: true, attempt: 1, chars: _.shuffle(Array.from(state.word)) })
+                console.log('You win! '+ state.win)
+                setState({...state, guess: '', completed: true, attempt: 1, win: state.win + 1, chars: _.shuffle(Array.from(state.word)) })
             }else{
                 console.log('You lose '+ state.attempt +', reset')
                 setState({...state, guess: '', attempt: state.attempt + 1})

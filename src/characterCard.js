@@ -1,7 +1,8 @@
+import './App.css';
 import React from 'react';
 
-export default function CharacterCard() {
+export default function CharacterCard(props) {
     return(
-        <div>CharacterCard</div>
+        <div className="card">{props.value}</div>
     )
 }

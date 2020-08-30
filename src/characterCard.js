@@ -15,7 +15,7 @@ export default function CharacterCard(props) {
         if(attemptRef.current != props.attempt){
             setActive(false)
             attemptRef.current = props.attempt
-            }           
+        }           
     })
 
     const className = `card ${active ? 'activeCard': ''}`
